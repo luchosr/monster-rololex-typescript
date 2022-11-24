@@ -22,7 +22,10 @@ const App = () => {
       const users = await getData<Monster[]>(
         "https://jsonplaceholder.typicode.com/users"
       );
+      setMonsters(users);
     };
+
+    fetchUsers();
   }, []);
 
   useEffect(() => {
